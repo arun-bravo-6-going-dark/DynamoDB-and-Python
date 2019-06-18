@@ -13,7 +13,7 @@ To run the program, type the following command:
 ```bash
 python3 MoviesCreateTable.py
 ```
-To create a table with Local Secondary Index run the file named MoviesCreateTableLSI.py.
+To create a table with Local Secondary Index run the file named "MoviesCreateTableLSI.py".
 
 ## Loading sample data
 In this step you upload movie1.json file containing the data about movies.
@@ -50,8 +50,8 @@ To run the program, type the following command:
 ```bash
 python3 MoviesItemOps03.py
 ```
-To atomically increment the rating of a movie run the file named MoviesItemOps04.py.
-To conditionally update an item run the file named MoviesItemOps05.py.
+To atomically increment the rating of a movie run the file named "MoviesItemOps04.py".
+To conditionally update an item run the file named "MoviesItemOps05.py".
 
 ## Deleting an item
 In this step you delete an item from the table
@@ -61,7 +61,7 @@ To run the program, type the following command:
 ```bash
 python3 MoviesItemOps06.py
 ```
-To delete all the records in the table run the file named MoviesScanandDelete.py.
+To delete all the records in the table run the file named "MoviesScanandDelete.py".
 ## Querying
 In this step you scan all the movies released in a year
 Run the file named MoviesQuery01.py.
@@ -70,7 +70,7 @@ To run the program, type the following command:
 ```bash
 python3 MoviesQuery01.py
 ```
-To query all the movies released in a year with certain titles run the file named MoviesQuery02.py.
+To query all the movies released in a year with certain titles run the file named "MoviesQuery02.py".
 
 ## Scanning
 In this step you query all the movies released in between certain years
@@ -89,4 +89,4 @@ To run the program, type the following command:
 ```bash
 python3 GSI.py
 ```
-To query an item using Global Secondary Index Run the file named QueryingGSI.py.
+To query an item using Global Secondary Index Run the file named "QueryingGSI.py".

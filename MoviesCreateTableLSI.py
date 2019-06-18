@@ -1,24 +1,13 @@
-#
-#  Copyright 2010-2019 Amazon.com, Inc. or its affiliates. All Rights Reserved.
-#
-#  This file is licensed under the Apache License, Version 2.0 (the "License").
-#  You may not use this file except in compliance with the License. A copy of
-#  the License is located at
-# 
-#  http://aws.amazon.com/apache2.0/
-# 
-#  This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-#  CONDITIONS OF ANY KIND, either express or implied. See the License for the
-#  specific language governing permissions and limitations under the License.
-#
+# MoviesCreateTableLSI: Program to show how to create a table with Local Secondary Index in DynamoDB, using Python and boto3.
+
 from __future__ import print_function # Python 2/3 compatibility
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 
 dynamodb = boto3.resource('dynamodb',region_name='us-east-1') 
 
 table = dynamodb.create_table(
     TableName='Movies',
-    KeySchema=[
+    KeySchema=[                 #key schema specifies the attributes that make up the primary key of a table, or the key attributes of an index
         {
             'AttributeName': 'year',
             'KeyType': 'HASH'  #Partition key
@@ -28,7 +17,7 @@ table = dynamodb.create_table(
             'KeyType': 'RANGE'  #Sort key
         },
     ],
-    LocalSecondaryIndexes=[
+    LocalSecondaryIndexes=[    #Represents the properties of a local secondary index.
         {
             'IndexName': 'LSIMovies',
             'KeySchema': [
@@ -41,6 +30,9 @@ table = dynamodb.create_table(
                     'KeyType': 'RANGE'
                 }
             ],
+            # Note: since we are projecting all the attributes of the table
+                # into the LSI, we could have set ProjectionType=ALL and
+                # skipped specifying the NonKeyAttributes
             'Projection': {
                 'ProjectionType': 'INCLUDE',
                 'NonKeyAttributes': ['rating', 'running_time_secs']

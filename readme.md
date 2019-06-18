@@ -3,7 +3,7 @@ In this project we stick to the concepts of creating a table, loading items into
 
 As a prerequisite python3 and AWS CLI must be installed
 
-Use ```bash aws configure ``` to log into AWS provided that you have an account and IAM configured
+Use ```aws configure``` in terminal to log into AWS provided that you have an account and IAM configured
 
 ## Create a table 
 In this step you create a table named Movies.

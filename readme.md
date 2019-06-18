@@ -1,4 +1,4 @@
-# DynamoDB Project 
+# DynamoDB and Python Project 
 In this project we stick to the concepts of creating a table, loading items into a table, creating, updating and deleting items in a table, querying and scanning a table, creating a table with Local Secondary Index, and finally creating a Global Secondary Index.
 
 ## Create a table 
@@ -9,6 +9,7 @@ To run the program, type the following command:
 ```bash
 python3 MoviesCreateTable.py
 ```
+To create a table with Local Secondary Index run the file named MoviesCreateTableLSI.py.
 
 ## Loading sample data
 In this step you upload movie1.json file containing the data about movies.
@@ -67,3 +68,5 @@ python3 MoviesQuery01.py
 ```
 To query all the movies released in a year with certain titles run the file named MoviesQuery01.py.
 
+## Scanning
+## Creating a Global Secondary Index

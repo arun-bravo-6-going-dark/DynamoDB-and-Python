@@ -57,16 +57,32 @@ To run the program, type the following command:
 ```bash
 python3 MoviesItemOps06.py
 ```
-
+To delete all the records in the table run the file named MoviesScanandDelete.py.
 ## Querying
-In this step you query all the movies released in a year
+In this step you scan all the movies released in a year
 Run the file named MoviesQuery01.py.
 
 To run the program, type the following command:
 ```bash
 python3 MoviesQuery01.py
 ```
-To query all the movies released in a year with certain titles run the file named MoviesQuery01.py.
+To query all the movies released in a year with certain titles run the file named MoviesQuery02.py.
 
 ## Scanning
-## Creating a Global Secondary Index
+In this step you query all the movies released in between certain years
+Run the file named MoviesScan.py.
+
+To run the program, type the following command:
+```bash
+python3 MoviesScan.py
+```
+
+## Creating a Global Secondary Index and querying an item using Global Secondary Index 
+In this step you create a global secondary index for the attribute title
+Run the file named GSI.py.
+
+To run the program, type the following command:
+```bash
+python3 GSI.py
+```
+To query an item using Global Secondary Index Run the file named QueryingGSI.py.

@@ -50,3 +50,20 @@ To conditionally update an item run the file named MoviesItemOps05.py.
 
 ## Deleting an item
 In this step you delete an item from the table
+Run the file named MoviesItemOps06.py.
+
+To run the program, type the following command:
+```bash
+python3 MoviesItemOps06.py
+```
+
+## Querying
+In this step you query all the movies released in a year
+Run the file named MoviesQuery01.py.
+
+To run the program, type the following command:
+```bash
+python3 MoviesQuery01.py
+```
+To query all the movies released in a year with certain titles run the file named MoviesQuery01.py.
+

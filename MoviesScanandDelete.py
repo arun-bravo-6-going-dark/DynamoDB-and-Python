@@ -1,7 +1,8 @@
+# MoviesScanandDelete: A sample program to show how to delete all the items in a table in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
 from botocore.exceptions import ClientError
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 import json
 import decimal
 from boto3.dynamodb.conditions import Key, Attr
@@ -22,6 +23,7 @@ response = table.scan(
     ExpressionAttributeNames=ean
     )
 
+# Deleting all the items
 try:
     for i in response['Items']:
 

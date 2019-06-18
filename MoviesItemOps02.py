@@ -1,6 +1,7 @@
+# MoviesItemsOps02: Program to show how to read an item in a table in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 import json
 import decimal
 from boto3.dynamodb.conditions import Key, Attr
@@ -16,6 +17,7 @@ class DecimalEncoder(json.JSONEncoder):
                 return int(o)
         return super(DecimalEncoder, self).default(o)
 
+#The region_name decides from which region the item will be read
 dynamodb = boto3.resource('dynamodb',region_name='us-east-1') 
 
 table = dynamodb.Table('Movies')
@@ -23,6 +25,7 @@ table = dynamodb.Table('Movies')
 title = "The Big New Movie"
 year = 2015
 
+#reading the item
 try:
     response = table.get_item(
         Key={

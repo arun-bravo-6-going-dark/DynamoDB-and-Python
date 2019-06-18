@@ -1,6 +1,7 @@
+# MoviesScan: A sample program to show how to scan all movies released between certain years in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 import json
 import decimal
 from boto3.dynamodb.conditions import Key, Attr
@@ -27,7 +28,7 @@ esk = None
 
 
 response = table.scan(
-    FilterExpression=fe,
+    FilterExpression=fe, #A string that contains conditions that DynamoDB applies after the Scan operation
     ProjectionExpression=pe,
     ExpressionAttributeNames=ean
     )
@@ -40,7 +41,7 @@ while 'LastEvaluatedKey' in response:
         ProjectionExpression=pe,
         FilterExpression=fe,
         ExpressionAttributeNames= ean,
-        ExclusiveStartKey=response['LastEvaluatedKey']
+        ExclusiveStartKey=response['LastEvaluatedKey'] #The primary key of the first item that this operation will evaluate
         )
 
     for i in response['Items']:

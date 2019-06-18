@@ -1,6 +1,7 @@
+# MoviesItemsOps05: Program to show how to update an item conditionally in a table in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 from botocore.exceptions import ClientError
 import json
 import decimal
@@ -15,6 +16,7 @@ class DecimalEncoder(json.JSONEncoder):
                 return int(o)
         return super(DecimalEncoder, self).default(o)
 
+#The region_name decides in which region the item will be updated
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 
 table = dynamodb.Table('Movies')
@@ -22,7 +24,7 @@ table = dynamodb.Table('Movies')
 title = "The Big New Movie"
 year = 2015
 
-# Conditional update (will fail)
+# Conditional update if the number of actors is greater than or equal to three
 print("Attempting conditional update...")
 
 try:

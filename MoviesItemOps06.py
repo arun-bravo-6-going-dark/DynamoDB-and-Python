@@ -1,6 +1,7 @@
+# MoviesItemsOps03: Program to show how to delete an item conditionally in a table in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
-import boto3
+import boto3 # Boto3 is the AWS SDK library for Python.
 from botocore.exceptions import ClientError
 import json
 import decimal
@@ -15,6 +16,7 @@ class DecimalEncoder(json.JSONEncoder):
                 return int(o)
         return super(DecimalEncoder, self).default(o)
 
+#The region_name decides in which region the item will be deleted
 dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 
 table = dynamodb.Table('Movies')
@@ -24,6 +26,7 @@ year = 2015
 
 print("Attempting a conditional delete...")
 
+# Conditional delete if the rating is lesser than or equal to 5.5
 try:
     response = table.delete_item(
         Key={

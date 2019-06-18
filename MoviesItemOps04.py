@@ -1,4 +1,4 @@
-# MoviesItemsOps03: Program to show how to update an item in a table in DynamoDB, using Python and boto3.
+# MoviesItemsOps04: Program to show how to increment an atomic counter(increment the rating for a movie) in a table in DynamoDB, using Python and boto3.
 
 from __future__ import print_function # Python 2/3 compatibility
 import boto3 # Boto3 is the AWS SDK library for Python.
@@ -23,20 +23,19 @@ table = dynamodb.Table('Movies')
 title = "The Big New Movie"
 year = 2015
 
-#updating the item
+#updating atomically the rating of the movie
 response = table.update_item(
     Key={
         'year': year,
         'title': title
     },
-    UpdateExpression="set info.rating = :r, info.plot=:p, info.actors=:a",
+    UpdateExpression="set info.rating = info.rating + :val",
     ExpressionAttributeValues={
-        ':r': decimal.Decimal(5.5),
-        ':p': "Everything happens all at once.",
-        ':a': ["Larry", "Moe", "Curly"]
+        ':val': decimal.Decimal(1)
     },
     ReturnValues="UPDATED_NEW"
 )
 
 print("UpdateItem succeeded:")
 print(json.dumps(response, indent=4, cls=DecimalEncoder))
+

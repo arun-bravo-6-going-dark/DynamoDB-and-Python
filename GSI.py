@@ -1,7 +1,9 @@
+#GSI: Program to Create a Global Secondary Index 
 import boto3
 
 # Boto3 is the AWS SDK library for Python.
 # You can use the low-level client to make API calls to DynamoDB.
+#The region_name decides in which region the GSI will be created
 client = boto3.client('dynamodb', region_name='us-east-1')
 
 try:

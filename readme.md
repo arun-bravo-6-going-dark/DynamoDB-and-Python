@@ -7,7 +7,7 @@ Use ```aws configure``` in terminal to log into AWS provided that you have an ac
 
 ## Create a table 
 In this step you create a table named Movies.
-Run the file named MoviesCreateTable.py.
+Run the file named "MoviesCreateTable.py".
 
 To run the program, type the following command:
 ```bash
@@ -17,7 +17,7 @@ To create a table with Local Secondary Index run the file named "MoviesCreateTab
 
 ## Loading sample data
 In this step you upload movie1.json file containing the data about movies.
-Run the file named MoviesLoadData.py.
+Run the file named "MoviesLoadData.py".
 
 To run the program, type the following command:
 ```bash
@@ -26,7 +26,7 @@ python3 MoviesLoadData.py
 
 ## Creating a new item
 In this step you create a new item in the table
-Run the file named MoviesItemOps01.py.
+Run the file named "MoviesItemOps01.py".
 
 To run the program, type the following command:
 ```bash
@@ -35,7 +35,7 @@ python3 MoviesItemOps01.py
 
 ## Reading an Item
 In this step you read an item from the table
-Run the file named MoviesItemOps02.py.
+Run the file named "MoviesItemOps02.py".
 
 To run the program, type the following command:
 ```bash
@@ -44,7 +44,7 @@ python3 MoviesItemOps02.py
 
 ## Updating an Item
 In this step you update an item from the table
-Run the file named MoviesItemOps03.py.
+Run the file named "MoviesItemOps03.py".
 
 To run the program, type the following command:
 ```bash
@@ -55,7 +55,7 @@ To conditionally update an item run the file named "MoviesItemOps05.py".
 
 ## Deleting an item
 In this step you delete an item from the table
-Run the file named MoviesItemOps06.py.
+Run the file named "MoviesItemOps06.py".
 
 To run the program, type the following command:
 ```bash
@@ -64,7 +64,7 @@ python3 MoviesItemOps06.py
 To delete all the records in the table run the file named "MoviesScanandDelete.py".
 ## Querying
 In this step you scan all the movies released in a year
-Run the file named MoviesQuery01.py.
+Run the file named "MoviesQuery01.py".
 
 To run the program, type the following command:
 ```bash
@@ -74,7 +74,7 @@ To query all the movies released in a year with certain titles run the file name
 
 ## Scanning
 In this step you query all the movies released in between certain years
-Run the file named MoviesScan.py.
+Run the file named "MoviesScan.py".
 
 To run the program, type the following command:
 ```bash
@@ -83,7 +83,7 @@ python3 MoviesScan.py
 
 ## Creating a Global Secondary Index and querying an item using Global Secondary Index 
 In this step you create a global secondary index for the attribute title
-Run the file named GSI.py.
+Run the file named "GSI.py".
 
 To run the program, type the following command:
 ```bash

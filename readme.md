@@ -11,8 +11,6 @@ Run the file named "MoviesCreateTable.py".
 
 To run the program, type the following command:
 ```bash
-pip3 install philter
-
 python3 MoviesCreateTable.py
 ```
 To create a table with Local Secondary Index run the file named "MoviesCreateTableLSI.py".
